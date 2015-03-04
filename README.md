@@ -20,3 +20,7 @@ Only one so far:
 Script       | Description
 -------------|-------------
 cron-list.sh | List all cron jobs for all users ([source](http://stackoverflow.com/a/137173))
+
+## Also see
+
+- [Check MX records](https://github.com/alberon/check-mx-records) - for historical reasons only this is in a separate repository

@@ -1,6 +1,6 @@
-# Alberon cPanel toolkit
+# Alberon Linux toolkit
 
-Useful scripts for maintaining cPanel servers. (May also be useful on non-cPanel servers.)
+Useful scripts for maintaining Linux servers.
 
 ## Setup
 
@@ -8,7 +8,7 @@ As root:
 
 ```bash
 cd
-git clone git@github.com:alberon/cpanel-toolkit.git alberon-toolkit
+git clone git@github.com:alberon/linux-toolkit.git alberon-linux-toolkit
 ```
 
 Then just run the scripts you need.
@@ -23,4 +23,4 @@ cron-list.sh | List all cron jobs for all users ([source](http://stackoverflow.c
 
 ## Also see
 
-- [Check MX records](https://github.com/alberon/check-mx-records) - for historical reasons only this is in a separate repository
+- [Check MX records](https://github.com/alberon/check-mx-records) - for historical reasons this is in a separate repository

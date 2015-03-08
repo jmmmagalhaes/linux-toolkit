@@ -15,11 +15,15 @@ Then just run the scripts you need.
 
 ## Scripts
 
-Only one so far:
-
-Script       | Description
--------------|-------------
-cron-list.sh | List all cron jobs for all users ([source](http://stackoverflow.com/a/137173))
+Script                              | Description
+------------------------------------|-------------
+cron-list.sh                        | List all cron jobs for all users ([source](http://stackoverflow.com/a/137173))
+**Composer**                        |
+composer-install.sh                 | Install Composer, optionally install cron job to keep it updated
+composer-uninstall.sh               | Uninstall Composer and cron job
+composer-upgrade.sh                 | Manually upgrade Composer
+cron-upgrade-composer-install.sh    | Install cron job to upgrade Composer daily
+cron-upgrade-composer-uninstall.sh  | Remove cron job
 
 ## Also see
 

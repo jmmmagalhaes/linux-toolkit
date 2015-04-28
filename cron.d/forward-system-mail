@@ -1,0 +1,6 @@
+MAILTO=cpanel@alberon.co.uk
+
+# Check all system accounts are forwarded to us at 12:10am
+10 0 * * *  root /root/alberon-linux-toolkit/forward-system-mail.sh
+
+# vim: ft=crontab

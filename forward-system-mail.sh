@@ -14,8 +14,9 @@ for user in /var/cpanel/users/*; do
     # If the .forward file doesn't exist already, create it
     if [ -d "$home" -a ! -f "$fwdfile" ]; then
         # Display a message only if we create any - it will be sent as an email by cron
-        echo "Creating $fwdfile"
-        echo "servers+$user-$server@alberon.co.uk" > $fwdfile
+        email="servers+$user-$server@alberon.co.uk"
+        echo "Creating $fwdfile (to $email)"
+        echo "$email" > $fwdfile
         chown $user:$user $fwdfile
         chmod 644 $fwdfile
     fi

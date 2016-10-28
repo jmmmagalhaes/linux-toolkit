@@ -16,9 +16,8 @@ fi
 
 # Based on http://serverfault.com/a/700286/76878
 old_files="$(lsof | grep "(path inode=.*)")"
-count="$(echo "$old_files" | wc -l)"
 
-if [ $count -gt 0 ]; then
+if [ "$old_files" != "" ]; then
     echo
     echo "These files are in use but no longer exist:"
     echo

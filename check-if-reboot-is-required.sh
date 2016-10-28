@@ -9,7 +9,20 @@ echo "Latest Kernel:  $latest"
 echo
 
 if [ "$latest" = "$current" ]; then
-    echo "No reboot is required"
+    echo "==> Kernel is up to date"
 else
-    echo "REBOOT REQUIRED"
+    echo "==> REBOOT REQUIRED"
+fi
+
+# Based on http://serverfault.com/a/700286/76878
+old_files="$(lsof | grep "(path inode=.*)")"
+count="$(echo "$old_files" | wc -l)"
+
+if [ $count -gt 0 ]; then
+    echo
+    echo "These files are in use but no longer exist:"
+    echo
+    echo "$old_files"
+    echo
+    echo "==> This may indicate that some services need restarting or a reboot is required"
 fi

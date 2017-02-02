@@ -2,8 +2,7 @@
 set -o nounset -o pipefail -o errexit
 cd "$(dirname "$0")"
 
-# The 'tail' part strips the '#!/usr/bin/env php' line
-curl -sS https://getcomposer.org/installer | tail -n +2 | php -- --install-dir=/usr/local/bin --filename=composer
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install cron job too?
 source bash/ask.sh

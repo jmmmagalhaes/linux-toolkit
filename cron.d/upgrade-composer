@@ -1,4 +1,4 @@
-# Upgrade Composer at midnight
+# Upgrade Composer at 1am
 0 1 * * *  root /root/alberon-linux-toolkit/cron-upgrade-composer-run.sh
 
 # vim: ft=crontab

@@ -18,6 +18,7 @@ Then just run the scripts you need.
 Script                                  | Description
 ----------------------------------------|-------------
 `cron-list.sh`                          | List all cron jobs for all users ([source](http://stackoverflow.com/a/137173))
+`reload-cron.sh`                        | Tell Cron to reload the config files in ./cron.d/ (inotify doesn't watch symlink targets)
 ***Composer***                          |
 `composer-install.sh`                   | Install Composer, optionally install cron job to keep it updated
 `composer-uninstall.sh`                 | Uninstall Composer and cron job

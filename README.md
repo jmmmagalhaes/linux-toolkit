@@ -25,10 +25,14 @@ Script                                  | Description
 `composer-upgrade.sh`                   | Manually upgrade Composer
 `cron-upgrade-composer-install.sh`      | Install cron job to upgrade Composer daily
 `cron-upgrade-composer-uninstall.sh`    | Remove cron job
+`check-composer-security.sh`            | Checks all repo composer.lock files for package vulnerabilities at SensioLabs
 ***Forward System Mail***               |
 `forward-system-mail.sh`                | Set up a mail forwarder for all user accounts to catch bounces and alerts
 `cron-forward-system-mail-install.sh`   | Install hourly cron job for mail forwarder
 `cron-forward-system-mail-uninstall.sh` | Remove cron job
+***Other***                             |
+`check-large-error-logs.sh`             | Displays all error_log files and their file sizes
+
 
 ## Also see
 

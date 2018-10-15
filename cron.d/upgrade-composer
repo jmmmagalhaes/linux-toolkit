@@ -1,4 +1,10 @@
-# Upgrade Composer at 1am
-0 1 * * *  root /root/alberon-linux-toolkit/cron-upgrade-composer-run.sh
+# Upgrade Composer at 12am
+# Fri 18 May 2018 - Dave changed to 7am because we're still getting this error on a regular basis:
+#   [Composer\Downloader\TransportException]
+#   The "https://getcomposer.org/versions" file could not be downloaded: SSL: Connection reset by peer
+#   Failed to enable crypto
+#   failed to open stream: operation failed
+# But it seems to work fine when I run it during the day, and it works some days not others!
+0 7 * * *  root /root/alberon-linux-toolkit/cron-upgrade-composer-run.sh
 
 # vim: ft=crontab

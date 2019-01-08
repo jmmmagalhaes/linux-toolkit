@@ -9,13 +9,17 @@ else
     verbose=false
 fi
 
+
 if [ -t 0 ]; then
     colors=
+    format=ansi
 else
     colors=--no-ansi
+    format=markdown
 fi
 
 symfony="$HOME/.symfony/bin/symfony $colors"
+security_checker="$HOME/.symfony/bin/symfony security:check --format=$format"
 
 # Helpers
 debug() {
@@ -43,7 +47,7 @@ check() {
         directory=$(dirname "$file")
 
         # ~/.symfony/bin/symfony security:check --dir=$directory
-        response=$($symfony security:check --dir="$directory" || true)
+        response=$($security_checker --dir="$directory" || true)
         if [[ ! $response =~ "No packages have known vulnerabilities" ]]; then
             debug ""
            echo "================================================================================"

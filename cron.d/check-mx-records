@@ -1,0 +1,7 @@
+MAILTO=cpanel@alberon.co.uk
+PATH=/bin:/usr/bin:/sbin
+
+# Check MX records every hour
+49 * * * * root /root/alberon-linux-toolkit/check-mx-records.php -qq
+
+# vim: ft=crontab

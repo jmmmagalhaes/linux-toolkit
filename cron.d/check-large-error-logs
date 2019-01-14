@@ -1,0 +1,7 @@
+MAILTO=cpanel@alberon.co.uk
+PATH=/bin:/usr/bin:/sbin
+
+# Check for large error logs once a week
+0 2 * * sun root /root/alberon-linux-toolkit/check-large-error-logs.sh
+
+# vim: ft=crontab

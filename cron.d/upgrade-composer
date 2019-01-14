@@ -1,3 +1,5 @@
+MAILTO=cpanel@alberon.co.uk
+
 # Upgrade Composer at 12am
 # Fri 18 May 2018 - Dave changed to 7am because we're still getting this error on a regular basis:
 #   [Composer\Downloader\TransportException]
@@ -5,6 +7,6 @@
 #   Failed to enable crypto
 #   failed to open stream: operation failed
 # But it seems to work fine when I run it during the day, and it works some days not others!
-0 7 * * *  root /root/alberon-linux-toolkit/cron-upgrade-composer-run.sh
+0 7 * * *  root /usr/local/bin/php /usr/local/bin/composer self-update -q
 
 # vim: ft=crontab
